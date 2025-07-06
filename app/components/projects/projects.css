@@ -1,0 +1,64 @@
+.projects{
+    background-color: rgba(227, 225, 225, 0.338);
+    padding: 6rem 4rem;
+}
+.projects h2{
+    margin: 2rem 0;
+    color: green;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(227, 225, 225, 0.082);
+    max-width: 600px;
+    padding-bottom: 1rem;
+    margin: auto;
+}
+button{
+    background-color: yellow;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    font-size: large;
+}
+.projectWrapper{
+    color: black;
+    background-color: red;
+}
+.projectContainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+}
+.centred {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 2rem;
+  }
+  
+  .centred div:first-child {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .centred a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 4px;
+  }
+  
+  .centred span {
+    font-weight: bold;
+  }
+  @media screen and (max-width: 900px) {
+  .grid {
+
+
+  }
+}
