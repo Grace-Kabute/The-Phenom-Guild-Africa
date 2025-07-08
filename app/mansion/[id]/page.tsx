@@ -1,9 +1,6 @@
-// app/mansion/[id]/page.tsx
-
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../../components/navbar/navbar';
 import { projectsData } from '../../data';
 
 interface Props {
@@ -13,7 +10,6 @@ interface Props {
 export default async function MansionPage({ params }: Props) {
   const { id } = params;
 
-  // simulate async (could be fetching from DB or file later)
   const project = projectsData.find((proj) => proj.id === id);
 
   if (!project) {
@@ -24,11 +20,10 @@ export default async function MansionPage({ params }: Props) {
 
   return (
     <main className="flex items-center justify-center min-h-screen">
-      <Navbar/>
       <div className="centred">
         <div>
           <Link href="/">home /</Link>
-          <Link href="/gallery">projects /</Link>
+          <Link href="/work">projects /</Link>
           <span>{title}</span>
         </div>
 

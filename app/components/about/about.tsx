@@ -40,8 +40,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <main className='about' id='about' ref={ref}>
-      {/* HERO SECTION */}
+    <main className='about containers' id='about' ref={ref}>
       <section className="aboutUs-background">
         <div
           className="aboutUs-overlay"
@@ -72,11 +71,10 @@ const AboutSection = () => {
         </div>
       </section>
 
-      {/* VISION SECTION */}
       <section className='vision'>
         <div className='vision-1'>
-          <div >
             <h2>Our Vision</h2>
+          <div >
             <p>
             We envision a future where exceptional design is accessible to all, blending function with artistry to create spaces that inspire and elevate. Our mission is to push the boundaries of architectural excellence while staying rooted in sustainability and community-driven values. We aim to redefine the design process and construction industry by offering innovative solutions that anticipate the needs of tomorrow , from sustainable designs to state-of-the-art 3D visualizations that ensure our clients see their dreams come to life before the first brick is laid.
             </p>
@@ -99,7 +97,6 @@ const AboutSection = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className='services'>
         <ServicesSection />
       </section>

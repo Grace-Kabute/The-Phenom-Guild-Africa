@@ -7,7 +7,7 @@ import './projects.css';
 import { projectsData } from '../../data';
 const Projects = () => {
   return (
-    <section className="projects" id='projects'>
+    <section className="projects containers" id='projects'>
       <h2 className="text-3xl font-bold mb-8 text-center">Recent Projects</h2>
       <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projectsData.slice(0, 3) .map(project => (
@@ -22,7 +22,7 @@ const Projects = () => {
       </div>
 
       <div className="mt-10 text-center">
-        <ButtonLink href="/gallery" className='btn'>Explore</ButtonLink>
+        <ButtonLink href="/work" className='btn'>Explore</ButtonLink>
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ export default function ButtonLink({ href, children, className = '' }: ButtonLin
   return (
     <Link
       href={href}
-      className={`px-6 py-3 rounded-full w-300 hover:rounded-full transition-all ${className}`}
+      className={`btn ${className}`}
     >
       {children}
     </Link>
