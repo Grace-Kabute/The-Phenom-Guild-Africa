@@ -7,14 +7,22 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import './hero.css';
 import { ChevronDown } from 'lucide-react';
+import { Montserrat  } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import { Maven_Pro } from 'next/font/google'
 
-
-// const images = [
-//   '/hero-bg.jpg',
-//   '/hero-1.jpg',
-//   '/hero-2.jpg',
-//   '/hero-4.jpg',
-// ];
+const mavenPro = Maven_Pro({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'], // pick what you need
+  variable: '--font-maven-pro',
+  display: 'swap',
+})
+const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-montserrat',
+});
 
 const Hero = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -42,7 +50,7 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
   return (
-    <main className='HeroContainer'>
+    <main className='hero containers'>
       <Navbar className={isScrollingUp ? '' : 'navbar-hidden'} />
         <video
         autoPlay
@@ -56,14 +64,15 @@ const Hero = () => {
       </video>
       <div className="grid-overlay"></div>
       <div className="hero-content">        
-        <h1>
-          WE ARE BUILT FOR THIS
+        <h1 className={montserrat.className}>
+          WE DESIGN. WE ENGINEER. WE DELIVER.
         </h1>
-        <h2>You focus on the dream. We handle the blueprint and the build.</h2>
-        <h3 className="mt-4 text-lg md:text-xl text-gray-700">
-          We deliver architectural plans, structural drawings, Bills of Quantities, and complete construction services. We handle the technical work so you can focus on the vision.        </h3>
-        <p><i>Trusted by homeowners and developers across Kenya.</i></p>
-        <ButtonLink href="/gallery" className='btn'>See our work</ButtonLink>
+        <h2 className={mavenPro.className}>WE ARE BUILT FOR THIS</h2>
+        <p className={inter.className}>
+           From concept to concrete, we craft architectural plans, structural designs, BoQs, and deliver complete builds. You dream it. We build it.
+           </p>
+        <p className='span'><span>Trusted by homeowners and developers across Kenya.</span></p>
+        <ButtonLink href="/work" className='btn'>See our work</ButtonLink>
         </div>
         {showArrow && (
         <div className="scroll-arrow">

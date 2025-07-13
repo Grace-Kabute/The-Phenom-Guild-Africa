@@ -5,36 +5,40 @@ import Image from 'next/image';
 import ServicesSection from './services';
 import ButtonLink from '../button';
 import './about.css';
-import { Maven_Pro } from 'next/font/google'
 
-const mavenPro = Maven_Pro({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-maven-pro',
-  display: 'swap',
-})
 const AboutSection = () => {
-  const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
+  const aboutRef  = useRef<HTMLDivElement | null>(null);
+  const visionRef  = useRef<HTMLDivElement | null>(null);
+  
+
+  const [aboutVisible, setAboutVisible] = useState(false);
+  const [visionVisible, setVisionVisible] = useState(false);
   const [overlayOpacity, setOverlayOpacity] = useState(0);
 
-  // Observer for text reveal
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
+      ([entry]) => setAboutVisible(entry.isIntersecting),
       { threshold: 0.3 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (aboutRef.current) observer.observe(aboutRef.current);
     return () => observer.disconnect();
   }, []);
 
-  // overlay fade effect
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => setVisionVisible(entry.isIntersecting),
+    { threshold: 0.6 }
+  );
+  if (visionRef.current) observer.observe(visionRef.current);
+  return () => observer.disconnect();
+}, []);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (!ref.current) return;
+      if (!aboutRef.current) return;
 
-      const section = ref.current;
+      const section = aboutRef.current;
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
@@ -47,17 +51,19 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <main className='about containers' id='about' ref={ref}>
+    <main className='about containers' id='about' ref={aboutRef}>
       <section className="aboutUs-background">
         <div
           className="aboutUs-overlay"
           style={{ opacity: overlayOpacity }}
         />
-        <div className={`aboutUs-text ${visible ? 'reveal' : 'hiddenReveal'}`}>
-          <h2 className={mavenPro.variable}>Who We Are</h2>
+        <div className={`aboutUs-text ${aboutVisible ? 'reveal' : 'hiddenReveal'}`}>
+          <h2>Who We Are</h2>
           <p>
             Phenom Guild Africa is a Design & Build Consortium that specializes in architectural
             design, structural engineering, and construction services.
+          </p>
+          <p>
             We provide comprehensive services, from architectural design and structural drawings
             to full-scale construction. Our focus is on delivering high-quality, sustainable
             designs that stand the test of time.
@@ -76,8 +82,8 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <div className='vision'>
-        <h2 className={mavenPro.variable}>Our Vision</h2>
+      <div className={`vision ${visionVisible ? 'one' : 'two'}`} ref={visionRef}>
+        <h2>Our Vision</h2>
         <div className='vision-1'>
           <div >
             <p>

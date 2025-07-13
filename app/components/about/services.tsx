@@ -17,6 +17,11 @@ const ServicesSection = () => {
         'We build what we design. With experienced crews and solid project management, we deliver quality construction , on time, and on budget.',
     },
     {
+      title: 'Interior design',
+      description:
+        'We build what we design. With experienced crews and solid project management, we deliver quality construction , on time, and on budget.',
+    },
+    {
       title: 'Project Management',
       description:
         'We stay hands-on from start to finish. We coordinate teams, track timelines, and keep you updated every step of the way, so you always know what’s happening on your project.',

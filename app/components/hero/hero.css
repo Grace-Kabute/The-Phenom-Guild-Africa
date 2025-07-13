@@ -3,76 +3,85 @@
     margin: 0;
     box-sizing: 0;
 }
-.HeroContainer {
+.hero {
   position: relative;
   overflow: hidden;
   height: 100vh;
   color: white;
 }
+.hero-content{
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
   z-index: -66;
 }
-.HeroContainer::after {
+.hero::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  background: rgba(8, 39, 45, 0.72);
+  background: rgba(8, 39, 45, 0.836);
   z-index: -33;
 }
 h1{
   font-size: xx-large;
   font-weight: bolder;
+  font-family: var(--font-montserrat);
 }
-.HeroContainer h2{
+
+.hero h2{
   color: white;
+  font-family: var(--font-maven-pro);
 }
-.hero-swiper {
-  position: absolute;
-  inset: 0;
-  z-index: -3;
-}
-
-.hero-slide {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.hero-content{
-  position: relative;
-  max-width: 800px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-}
-
-.hero-content h3{
+h3{
     margin: 1.5rem 0;
-    font-size: large;
+    font-size: larger;
+    color: black;
+}
+h2 {
+    margin: 2rem 0;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    text-transform: uppercase;
+    font-family: var(--font-maven-pro);
+  }
+p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.span{
+  margin:2rem 0;
+  font-style: italic;
 }
 .btn{
     background-color: yellow;
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: .8rem 2.5rem;
     margin-bottom: 1rem;
-    margin-top: 2rem;
     font-weight: bold;
     font-size: medium;
     align-self: center;
     color: black;
-    width: 300px;
+    min-width: 200px;
+    border-radius: 15px;
+    margin-top: 2rem;
+    text-transform: uppercase;
 }
 .btn:hover{
   background-color: #0c3e49;
@@ -99,7 +108,7 @@ h1{
   }
 }
 
-.HeroContainer .img:hover{
+.hero .img:hover{
     transform: scale(1.15);
 }
 .grid-overlay {
@@ -122,27 +131,27 @@ h1{
       background-position: 50px 50px;
     }
   }
-  
-  @media screen and (max-width: 767px){
-    .HeroContainer{
-        padding: 1rem;
-        width: 103vw;
-        height: 98vh;
-        position: relative;
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    .hero{
+      height: 100vh;
     }
-    .img{
-        display: none;
+    p{
+      font-size: large;
     }
-    .hero-content{
-        position: absolute;
-        top: 15%;
-        left: 0%;
-        padding: .5rem;
+  }
+  @media screen and (min-width: 1024px){
+    .hero{
+      height: 100vh;
     }
-    .img-mbl{
-      position: absolute;
-      bottom: 3%;
-      left: 0;
-      width: 100%;
+    p{
+      font-size: large;
+    }
+  }
+@media screen and (max-width: 320px){
+    .hero{
+      height: 120vh;
+    }
+    h1{
+      font-size: large;
     }
   }

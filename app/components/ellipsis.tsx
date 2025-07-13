@@ -30,7 +30,7 @@ const EllipsisText: React.FC<EllipsisTextProps> = ({ text, lines = 3 }) => {
 
   return (
     <div>
-      <p ref={textRef} style={clampedStyle}>{text}</p>
+      <p ref={textRef} style={clampedStyle} >{text}</p>
       {isOverflowing && (
         <button
           onClick={() => setExpanded(!expanded)}

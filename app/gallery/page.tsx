@@ -1,21 +1,22 @@
 import React from 'react'
-import ProjectCard from '../components/projects/projectCard';
-import { projectsData } from '../data';
 
-
-const Gallery = () => {
+const page = () => {
   return (
-      <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {projectsData.map(project => (
-          <ProjectCard
-            id={project.id}
-            key={project.id}
-            src={project.image}
-            title={project.title}
-            subtitle={`${project.location} • ${project.totalArea}`}
-          />
-        ))}
-      </div>  )
+    <div>
+      <h1>KJ</h1>
+      <h1>KUJUI</h1>
+      <h1>JK</h1>
+      <h1>V</h1>
+      <p>iu
+        justify8t
+        tug8ssss
+        
+      </p>
+      <h1>hi trevor
+        
+      </h1>
+    </div>
+  )
 }
 
-export default Gallery
+export default page
