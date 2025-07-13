@@ -9,8 +9,14 @@ import './hero.css';
 import { ChevronDown } from 'lucide-react';
 import { Montserrat  } from 'next/font/google';
 import { Inter } from 'next/font/google';
+import { Maven_Pro } from 'next/font/google'
 
-
+const mavenPro = Maven_Pro({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'], // pick what you need
+  variable: '--font-maven-pro',
+  display: 'swap',
+})
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -61,7 +67,7 @@ const Hero = () => {
         <h1 className={montserrat.className}>
           WE DESIGN. WE ENGINEER. WE DELIVER.
         </h1>
-        <h2 className={montserrat.className}>WE ARE BUILT FOR THIS</h2>
+        <h2 className={mavenPro.className}>WE ARE BUILT FOR THIS</h2>
         <p className={inter.className}>
            From concept to concrete, we craft architectural plans, structural designs, BoQs, and deliver complete builds. You dream it. We build it.
            </p>

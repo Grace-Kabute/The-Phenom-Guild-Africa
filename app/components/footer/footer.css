@@ -35,6 +35,9 @@ input, textarea{
 button{
     padding: 1rem;
 }
+.footer h3{
+    font-size: larger;
+    color: green;}
 .footer-1{
     display: flex;
     gap: 2rem;
@@ -45,10 +48,6 @@ button{
 }
 .footer-2{
     max-width: 800px;
-}
-h3{
-    font-size: larger;
-    color: green;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){

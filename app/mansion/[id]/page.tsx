@@ -16,7 +16,7 @@ export default async function MansionPage({ params }: Props) {
     notFound();
   }
 
-  const { title, description, image, client, year, location, totalArea, material } = project;
+  const { title, description, image, client, year, location, totalArea } = project;
 
   return (
     <main className="flex items-center justify-center min-h-screen">
@@ -43,7 +43,6 @@ export default async function MansionPage({ params }: Props) {
               <span><strong>Location:</strong> {location}</span>
               <span><strong>Year:</strong> {year}</span>
               <span><strong>Area:</strong> {totalArea}</span>
-              <span><strong>Material:</strong> {material}</span>
             </div>
           </div>
         </div>
