@@ -18,6 +18,7 @@ const ProjectCard = ({id, src, title, subtitle, large = false }: {id:string, src
 
   <div className="flex-layout">
     <h4>{title}</h4>
+    <span>|</span>
     <p>{subtitle}</p>
   </div>
 </Link>

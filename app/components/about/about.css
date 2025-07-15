@@ -113,9 +113,15 @@
   }
   .services {
     background-color: rgba(233, 250, 245, 0.24);
-    padding: 4rem 2rem;
     width: 100%;
   }
+.services-1{
+  min-width: 800px;
+}
+.services-1 h2{
+  padding-bottom: 2rem;
+  margin-top: 0;
+}
   .grid{
     gap: 2rem;
     padding: 2rem;

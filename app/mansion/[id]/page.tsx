@@ -1,7 +1,10 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import '../../components/projects/projects.css';
 import { projectsData } from '../../data';
+import Navbar from '@/app/components/navbar/navbar';
+import Footer from '@/app/components/footer/footer';
 
 interface Props {
   params: { id: string };
@@ -16,37 +19,48 @@ export default async function MansionPage({ params }: Props) {
     notFound();
   }
 
-  const { title, description, image, client, year, location, totalArea } = project;
+  const { title, description, image, client, year, location, totalArea,work } = project;
 
   return (
+    <>
+      <Navbar/>
     <main className="flex items-center justify-center min-h-screen">
       <div className="centred">
-        <div>
+        <div className='mb-16'>
           <Link href="/">home /</Link>
           <Link href="/work">projects /</Link>
           <span>{title}</span>
         </div>
 
         <div className="projectContainer">
-          <Image
-            src={image}
-            alt={title}
-            width={600}
-            height={600}
-            className="h-60 object-cover"
-          />
+          <div className='relative'>
+            <div className="absolute bottom-10 left-0 bg-black/50 px-3 py-1 text-sm font-semibold z-10">
+              <p className='float'>Area: <br />{totalArea}</p>
+              </div>
+            <Image
+              src={image}
+              alt={title}
+              width={600}
+              height={600}
+              className="h-150 object-cover"
+            />
+  </div>
           <div className="space">
-            <h1>{title}</h1>
-            <p className="text">{description}</p>
-            <div className="flex">
-              <span><strong>Client:</strong> {client}</span>
-              <span><strong>Location:</strong> {location}</span>
-              <span><strong>Year:</strong> {year}</span>
-              <span><strong>Area:</strong> {totalArea}</span>
+            <div className='works'>
+              <h1>{title}/</h1>
+              <p>{work}</p>
+            </div>
+            <p className="text max-w-xl mt-20 mb-20">{description}</p>
+            <div className="details">
+              <span>Client: <br /><strong>{client}</strong></span>
+              <span>Location: <br /> <strong>{location}</strong></span>
+              <span>Year: <br /> <strong>{year}</strong></span>
             </div>
           </div>
         </div>
       </div>
     </main>
+      <Footer/>
+</>
   );
 }
