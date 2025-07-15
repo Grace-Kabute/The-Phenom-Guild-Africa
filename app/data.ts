@@ -9,7 +9,8 @@ export interface Project {
     client: string;
     year: number;
     image: string;
-    gallery:object
+    gallery:object;
+    work:string
   }
   
   export const projectsData: Project[] = [
@@ -17,7 +18,7 @@ export interface Project {
       id: "project-001",
       title: "4-bedroom-bungalow",
       location: "Kenya",
-      totalArea: "250 sqm",
+      totalArea: "1250 sqm",
       description: "A 4-bedroom flat-roof villa with a study, built using local materials and passive cooling for sustainable, year-round comfort. Designed and constructed with precision.",
       client: "Private Client",
       year: 2023,
@@ -38,8 +39,12 @@ export interface Project {
         twelve: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752069506/01-Bungalow-Flat-Roof_cypj2u.jpg",
         thirteen: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752069817/13-Bungalow-Flat-Roof_kkrepx.jpg",
         fourteen: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752069819/17-Bungalow-Flat-Roof_hxjejq.jpg",
-        fifteen: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752069820/16-Bungalow-Flat-Roof_po4vj6.jpg"
-      }
+        fifteen: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752069820/16-Bungalow-Flat-Roof_po4vj6.jpg",
+        sixteen:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752076880/481044428_1060341926110759_1991500255889645506_n_ic6hbc.jpg",
+        seventeen:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752076741/481070923_1060341652777453_6908803224939799222_n_g0knil.jpg"
+      },
+      work:"Architectural design,construction,Project management,Interior design"
+
     },
     {
       id: "project-002",
@@ -68,6 +73,8 @@ export interface Project {
         fifteen:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069817/11-Housing-Nyansiongo-Scheme_uortvf.jpg",
         sixteen:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069818/14-Housing-Nyansiongo-Scheme_hjmdwr.jpg"
       },
+      work:"Architectural design"
+
     },
     {
       id: "project-004",
@@ -90,6 +97,7 @@ export interface Project {
         nine:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069812/09-Housing-Kikambala_m6cexh.jpg",
         ten:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069756/03-Housing-Kikambala_mbhwxu.jpg"
       },
+      work:"Architectural design"
     },
         {
       id: "project-006",
@@ -113,41 +121,9 @@ export interface Project {
         ten:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069810/09-Housing-Kerarapon_vx9daj.jpg",
         eleven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069792/06-Housing-Kerarapon_aavku7.jpg"
       },
+      work:"Architectural design"
     },
-    {
-      id: "project-005",
-      title: "Urban Commercial Hub",
-      location: "Kenya",
-      totalArea: "1,200 sqm",
-      description: "A multi-story commercial building optimized for natural light and modular office spaces.",
-      client: "Private developers",
-      year: 2023,
-      image:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069513/02-Commercial_guoepz.jpg",
-      gallery: {
-        one:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069763/04-Commercial_h7pqvb.jpg",
-        two:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069506/01-Commercial_xpfc1d.jpg",
-        three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069787/06-Commercial_ql7bwt.jpg",
-        four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069752/03-Commercial_cikz8u.jpg",
-        five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069804/08-Commercial_wrsxeb.jpg"
-      },
-    },
-    {
-      id: "project-003",
-      title: "3-bedroom-bungalow",
-      location: "Kenya",
-      totalArea: "180 sqm",
-      description: "This 3-bedroom bungalow features a functional single-level layout with optimized space planning, offering comfortable living with a focus on practicality and clean design execution.",
-      client: "Private Client",
-      year: 2021,
-      image:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069984/05-3-bedroom-bungalow_hhis0k.jpg",
-      gallery: {
-        one:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069503/01-3-bedroom-bungalow_lplhis.jpg",
-        two:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069984/04-3-bedroom-bungalow_kwpmss.jpg",
-        three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069749/03-3-bedroom-bungalow_i8kbxy.jpg",
-        four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069738/02-3-bedroom-bungalow_nhbowk.jpg"
-      },
-    },
-    {
+        {
       id: "project-007",
       title: "Modern Bungalow",
       location: "Vipingo, Kilifi",
@@ -165,6 +141,65 @@ export interface Project {
         six:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069757/03-Housing-Vipingo_tzynyt.jpg",
         seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069768/04-Housing-Vipingo_ivlxdu.jpg",
       },
+      work:"Architectural design"
+    },
+    {
+      id: "project-020",
+      title: "Residential apartments",
+      location: "Kenya",
+      totalArea: "180 sqm",
+      description: "A modern take on traditional bungalow architecture with smart home integration.",
+      client: "Private Developer",
+      year: 2021,
+      image:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509171/01-Membley_Estate_ss7c1m.jpg",
+      gallery: {
+        one:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509179/05-Membley-Estate_qu7jzo.jpg",
+        two:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509177/04-Membley-Estate_gm24dq.jpg",
+        three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509175/03-Membley-Estate_w40uxq.jpg",
+        four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509173/02-Membley-Estate_ldbpjb.jpg",
+        five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509182/07-Membley-Estate_zdlv8o.jpg",
+        six:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509184/08-Membley-Estate_wru1bb.jpg",
+        seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752509185/09-Membley-Estate_f8qezj.jpg"
+      },
+      work:"Architectural design"
+    },
+    {
+      id: "project-005",
+      title: "Urban Commercial Hub",
+      location: "Kenya",
+      totalArea: "1,200 sqm",
+      description: "A multi-story commercial building optimized for natural light and modular office spaces.",
+      client: "Private developers",
+      year: 2023,
+      image:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069513/02-Commercial_guoepz.jpg",
+      gallery: {
+        one:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069763/04-Commercial_h7pqvb.jpg",
+        two:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069506/01-Commercial_xpfc1d.jpg",
+        three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069787/06-Commercial_ql7bwt.jpg",
+        four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069752/03-Commercial_cikz8u.jpg",
+        five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069804/08-Commercial_wrsxeb.jpg",
+        six: "https://res.cloudinary.com/dn40xyabf/image/upload/v1752486556/b71cec07-38f0-4f2f-b4ec-fcec044197b8.png",
+        seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752486496/3553eeba-24d7-40bf-b103-f5e96c82c1a5.png"
+      },
+      work:"Architectural design"
+    },
+    {
+      id: "project-003",
+      title: "3-bedroom-bungalow",
+      location: "Kenya",
+      totalArea: "180 sqm",
+      description: "This 3-bedroom bungalow features a functional single-level layout with optimized space planning, offering comfortable living with a focus on practicality and clean design execution.",
+      client: "Private Client",
+      year: 2021,
+      image:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069984/05-3-bedroom-bungalow_hhis0k.jpg",
+      gallery: {
+        one:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069503/01-3-bedroom-bungalow_lplhis.jpg",
+        two:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069984/04-3-bedroom-bungalow_kwpmss.jpg",
+        three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069749/03-3-bedroom-bungalow_i8kbxy.jpg",
+        four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069738/02-3-bedroom-bungalow_nhbowk.jpg",
+        five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752486652/481055829_1060341939444091_6129126332081186483_n_qnyez7.jpg"
+      },
+      work:"Architectural design"
     },
     {
       id: "project-008",
@@ -182,6 +217,7 @@ export interface Project {
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069786/05-Housing-Spur-Mall_rx4upo.jpg",
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069508/01-Housing-Spur-Mall_x1kbcn.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-009",
@@ -201,6 +237,7 @@ export interface Project {
         six:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069799/07-Housing-Juja_sbsmid.jpg",
         seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069755/03-Housing-Juja_iqzeqm.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-010",
@@ -218,6 +255,7 @@ export interface Project {
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069789/05-Satellite-Dagoretti_djnmrb.jpg",
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069763/03-Satellite-Dagoretti_cshxmt.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-011",
@@ -239,6 +277,7 @@ export interface Project {
         eight:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069814/09-Style-and-Function_zkujmz.jpg",
         ten:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069816/10-Style-and-Function_w6fnyz.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-012",
@@ -259,6 +298,7 @@ export interface Project {
         seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069733/01-Flat-Roof_amjcyi.jpg",
         eight:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069752/03-Flat-Roof_aesu1p.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-013",
@@ -278,6 +318,7 @@ export interface Project {
         six:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069803/07-Sunlit-Serenity_ovf7qb.jpg",
         seven:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069762/03-Sunlit-Serenity_s9fpag.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-014",
@@ -295,6 +336,7 @@ export interface Project {
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069735/01-full-Length-window_l30ved.jpg",
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069790/06-full-Length-window_beth0e.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-015",
@@ -312,6 +354,7 @@ export interface Project {
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069736/01-Mciara-Aisonette_qpyqoa.jpg",
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069746/02-Mciara_aisonette_elmwnm.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-016",
@@ -328,6 +371,7 @@ export interface Project {
         three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069760/03-Residential-Appartments_akrdfa.jpg",
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069784/05-Residential-Appartments_bdoozz.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-017",
@@ -344,6 +388,7 @@ export interface Project {
         three:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069510/01-Residential-1-bedrooms_pvokt7.jpg",
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069747/02-Residential-1-bedrooms_oquhwe.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-018",
@@ -361,6 +406,7 @@ export interface Project {
         four:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069747/02-Housing-VRoof_b1npo2.jpg",
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069509/01-Housing-VRoof_mapfob.jpg"
       },
+      work:"Architectural design"
     },
     {
       id: "project-019",
@@ -379,6 +425,7 @@ export interface Project {
         five:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069785/05-Style-and-Serenity_yc7u9p.jpg",
         six:"https://res.cloudinary.com/dn40xyabf/image/upload/v1752069738/01-Style-and-Serenity_zskogl.jpg"
       },
-    },
+      work:"Architectural design"
+    }
   ];
   

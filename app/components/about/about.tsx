@@ -92,7 +92,7 @@ const AboutSection = () => {
 
           <div>
             <Image
-              src="/blueP.jpg"
+              src="https://res.cloudinary.com/dn40xyabf/image/upload/v1752492417/blueP_f3l0x6.jpg"
               alt="Our Vision"
               width={800}
               height={800}

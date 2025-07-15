@@ -1,6 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { ArrowUp, ArrowDown } from 'lucide-react';
+
+
+
 
 interface EllipsisTextProps {
   text: string;
@@ -8,7 +12,7 @@ interface EllipsisTextProps {
 }
 
 const EllipsisText: React.FC<EllipsisTextProps> = ({ text, lines = 3 }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
 
@@ -44,7 +48,7 @@ const EllipsisText: React.FC<EllipsisTextProps> = ({ text, lines = 3 }) => {
             fontSize: '0.9rem',
           }}
         >
-          {expanded ? 'Read less' : 'Read more'}
+          {expanded ? <ArrowUp className="w-5 h-5" /> : <ArrowDown className="w-5 h-5" />}
         </button>
       )}
     </div>

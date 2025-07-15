@@ -16,7 +16,7 @@ const Navbar = ({ className = '' }) => {
   const toggleContacts = () => setShowMobileContacts(!showMobileContacts);
 
   const closeMenu = () => setMenuOpen(false);
-  const src = '/Phenom.png';
+  const src = 'https://res.cloudinary.com/dn40xyabf/image/upload/v1752491823/Phemon_eoeilf.png';
   const title = 'Logo';
   
   return (

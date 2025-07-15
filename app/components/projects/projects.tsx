@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <section className="projects containers" id='projects'>
       <div className="projects-1">
-        <h2 className={`title ${mavenPro.variable}`}>Exceptional Properties. Elevated Living</h2>
+        <h2 className={`title ${mavenPro.variable}`}>Luxury residences curated for comfort, style, and community.</h2>
         <p>We craft and manage premium homes in prime locations. Designed by architects, built by experts, styled to perfection. Every detail is curated for a lifestyle that feels effortless, inside communities that thrive.</p>
         <ButtonLink href="/work" className='btn'>VIEW ALL PROJECTS</ButtonLink>
       </div>
