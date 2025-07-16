@@ -24,17 +24,17 @@ export default async function MansionPage({ params }: Props) {
   return (
     <>
       <Navbar/>
-    <main className="flex items-center justify-center min-h-screen">
+    <main className="flex items-center justify-center min-h-screen mt-16">
       <div className="centred">
         <div className='mb-16'>
-          <Link href="/">home /</Link>
-          <Link href="/work">projects /</Link>
+          <Link href="/" className='back'>home /</Link>
+          <Link href="/work" className='back'>projects /</Link>
           <span>{title}</span>
         </div>
 
         <div className="projectContainer">
           <div className='relative'>
-            <div className="absolute bottom-10 left-0 bg-black/50 px-3 py-1 text-sm font-semibold z-10">
+            <div className="absolute bottom-10 left-0 bg-black/60 px-3 py-1 text-sm font-semibold z-10">
               <p className='float'>Area: <br />{totalArea}</p>
               </div>
             <Image
@@ -50,7 +50,7 @@ export default async function MansionPage({ params }: Props) {
               <h1>{title}/</h1>
               <p>{work}</p>
             </div>
-            <p className="text max-w-xl mt-20 mb-20">{description}</p>
+            <p className="text max-w-xl">{description}</p>
             <div className="details">
               <span>Client: <br /><strong>{client}</strong></span>
               <span>Location: <br /> <strong>{location}</strong></span>

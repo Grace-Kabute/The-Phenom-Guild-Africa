@@ -1,126 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .about {
-    background-color: white;
-  }
-  
-  .about section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 6rem 2rem;
-    line-height: 2rem;
-    font-size: large;
-  }
-  
-
-  .aboutUs-background {
-    position: relative;
-    background-image: url('/construct.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .aboutUs-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.84);
-    pointer-events: none;
-    z-index: 1;
-    transition: opacity 0.3s ease;
-  }
-  
-  .aboutUs-text{
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    max-width: 800px;
-  }
-  .aboutUs-text h2{
-    color: White;
+  .about{
+    padding-bottom: 4rem;
+    min-height: 100vh;
+    width: 100vw;
   }
   .aboutUs-1 {
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
+    font-weight: bold;
+    font-size: larger;
   }
-  
-  .aboutUs-img {
-    flex-shrink: 0;
-  }
-  .reveal {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.8s ease-in-out;
-  }
-  
-  .hiddenReveal {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  .vision{
-    background-color: rgba(227, 225, 225, 0.475);
-    padding: 4rem 2rem;
-    height: 100vh;
-  }
-  .vision p{
-    margin-bottom: 4rem;
-  }
-  .one{
-    transform: translateY(0);
-    transition: all 0.8s ease-in-out;
-  }
-  .two{
-    transform: translateY(60px);
-  }
-  .vision-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .vision-1 p {
+    blockquote {
     max-width: 800px;
-  }
-  
-  blockquote {
-    max-width: 600px;
+    min-width: 300px;
     font-weight: bold;
     font-style: italic;
     border-left: 4px solid #999;
     padding-left: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
     color: #333;
+    float:right;
   }
-  .founder{
+  .company{
+    width: 600px;
+    margin: 4rem 4rem;
+    color: black;
     text-align: center;
-    align-self: center;
+    text-transform: uppercase;
+    font-family: serif;
   }
-  .services {
-    background-color: rgba(233, 250, 245, 0.24);
-    width: 100%;
+  .block{
+      margin: 4rem 3rem;
   }
-.services-1{
-  min-width: 800px;
+  .gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.151), rgba(255, 255, 255, 0.087));
+  mix-blend-mode: luminosity;
+  filter: grayscale(100%);
+  z-index: 1;
 }
+.company-container{
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url('https://res.cloudinary.com/dn40xyabf/image/upload/v1752578851/florian-schmid-yDgg69ofPO8-unsplash_io9gwh.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.chooseUs{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4rem 3rem;
+}
+.chooseUs h1{
+  max-width: 600px;
+  min-width: 300px;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.694);
+}
+.cta{
+  background-color: grey;
+  padding: 1rem 4rem;
+}
+.cta:hover{
+  color: white;
+  background-color: rgba(128, 128, 128, 0.815);
+}
+  .services {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1rem;
+  }
 .services-1 h2{
   padding-bottom: 2rem;
   margin-top: 0;
+}
+.service-items{
+  max-width: 800px;
 }
   .grid{
     gap: 2rem;
@@ -131,22 +98,12 @@
     width: auto;
     height: auto;
   }
-  
-  /* Mobile responsive */
-  @media (max-width: 768px) {
-    .about section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .aboutUs-1,
-    .vision-1 {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .aboutUs-text {
-      text-align: center;
-    }
+  @media screen and (max-width: 768px) {
+    .chooseUs{
+  display: flex;
+  flex-direction: column;
+}
+.services{
+  flex-direction: column;
+}
   }
-  
