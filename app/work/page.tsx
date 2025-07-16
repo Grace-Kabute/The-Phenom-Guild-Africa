@@ -7,6 +7,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
+import Link from 'next/link';
+
 
 
 
@@ -19,7 +21,8 @@ const Work = () => {
   return (
 <>
   <Navbar />
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-36 px-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16 px-4">
+      <Link href="/" className='back'>Back /</Link>
     {projectsData.map((project) => (
       <div key={project.id} data-aos="zoom-in">
         <ProjectCard

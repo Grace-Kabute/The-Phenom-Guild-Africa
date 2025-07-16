@@ -3,9 +3,9 @@
 import React, {useState} from 'react';
 import ServiceItem from './serviceItem';
 import Image from 'next/image';
+import './about.css'
 
-
-const ServicesSection = (title:string) => {
+const ServicesSection = ({title}:{title:string}) => {
   const [currentImage, setCurrentImage] = useState<string>(
     'https://res.cloudinary.com/dn40xyabf/image/upload/v1752509173/02-Membley-Estate_ldbpjb.jpg'
   );
@@ -44,10 +44,10 @@ const ServicesSection = (title:string) => {
 
   return (
     <main id='services'>
-      <section className="services flex flex-col md:flex-row gap-8 w-full">
+      <section className="services">
       <div className='services-1'>
         <h2>Our Services</h2>
-        <div className="service-items flex-1 max-w-3xl w-full ">
+        <div className="service-items">
           {services.map((service, idx) => (
             <ServiceItem
               key={idx}
@@ -60,13 +60,12 @@ const ServicesSection = (title:string) => {
           ))}
         </div>
       </div>
-      <div className="flex-1 h-[600px]">
+      <div className='relative w-full max-w-[600px] h-auto mx-auto'>
         <Image
         src={currentImage}
         alt={title}
-        width={500}
-        height={800}
-        className="object-cover rounded-lg w-full h-full"
+        fill
+        className="object-cover rounded-lg w-80 h-full saturate-[0.6] brightness-[0.9] contrast-[0.9]"
   />      
 </div>
 

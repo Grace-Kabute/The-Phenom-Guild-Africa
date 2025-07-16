@@ -10,6 +10,7 @@ import { ChevronDown } from 'lucide-react';
 import { Montserrat  } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Maven_Pro } from 'next/font/google'
+import SocialLinks from '../socials';
 
 const mavenPro = Maven_Pro({
   subsets: ['latin'],
@@ -59,7 +60,7 @@ const Hero = () => {
         playsInline
         className="bg-video"
       >
-        <source src="https://res.cloudinary.com/dn40xyabf/video/upload/v1752491746/trimmed_nfh8be.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dn40xyabf/video/upload/v1752566787/Phenom_Guild_Africa_pkndml.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="grid-overlay"></div>
@@ -68,10 +69,12 @@ const Hero = () => {
           WE DESIGN. WE ENGINEER. WE DELIVER.
         </h1>
         <h2 className={mavenPro.className}>WE ARE BUILT FOR THIS</h2>
-        <p className={inter.className}>
-           From concept to concrete, we craft architectural plans, structural designs, BoQs, and deliver complete builds. You dream it. We build it.
-           </p>
-        <p className='span'><span>Trusted by homeowners and developers across Kenya.</span></p>
+        <div className='hero-text'>
+          <p className={inter.className}>
+             From concept to concrete, we craft architectural plans, structural designs, BoQs, and deliver complete builds. You dream it. We build it.
+             </p>
+          <p className='span'><span>Trusted by homeowners and developers across Kenya.</span></p>
+        </div>
         <ButtonLink href="/work" className='btn'>See our work</ButtonLink>
         </div>
         {showArrow && (
@@ -79,6 +82,9 @@ const Hero = () => {
           <ChevronDown size={60} />
         </div>
       )}
+            <div className="hero-socials">
+              <SocialLinks />
+          </div>
     </main>
   )
 }

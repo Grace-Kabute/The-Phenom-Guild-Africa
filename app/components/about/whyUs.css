@@ -1,0 +1,41 @@
+.why-item {
+  color: rgba(0, 0, 0, 0.877);
+  padding: 1.5rem 0;
+  font-family: 'Inter', sans-serif;
+  font-size: larger;
+}
+
+.why-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.why-number {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+.why-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.694);
+  white-space: nowrap;
+}
+
+.why-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.why-description {
+  font-size: 0.95rem;
+  color: black;
+  margin: 0;
+  line-height: 1.6;
+}

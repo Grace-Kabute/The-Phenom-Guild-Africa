@@ -34,8 +34,8 @@ const Navbar = ({ className = '' }) => {
         <nav className="nav-links">
           <Link href="/" className='link'>Home</Link>
           <Link href="/#about" className='link'>About</Link>
-          <Link href="/#projects" className='link'>Projects</Link>
           <Link href="/#services" className='link'>Services</Link>
+          <Link href="/work" className='link'>Projects</Link>
           <Link href="/gallery" className='link'>Gallery</Link>
         </nav>
         <div className="hamburger" onClick={toggleMenu}>
@@ -45,8 +45,8 @@ const Navbar = ({ className = '' }) => {
           <nav className="dropdown-menu">
             <Link href="/" className="link" onClick={closeMenu}>Home</Link>
             <Link href="/#about" className="link" onClick={closeMenu}>About</Link>
-            <Link href="/#projects" className="link" onClick={closeMenu}>Projects</Link>
-            <Link href="/#services" className="link" onClick={closeMenu}>Services</Link>
+            <Link href="/#services" className='link'>Services</Link>
+            <Link href="/work" className="link" onClick={closeMenu}>Projects</Link>
             <Link href="/gallery" className="link" onClick={closeMenu}>Gallery</Link>
           </nav>
         )}

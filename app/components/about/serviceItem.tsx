@@ -29,7 +29,7 @@ const [showDescription, setShowDescription] = useState(defaultShow || false);
   };
 
   return (
-    <div className="pt-4 pb-6 w-full">
+    <div className="pt-4 pb-6 w-full ">
       <div className="flex justify-between items-start w-full">
         <h3 className="text-bold text-lg text-gray-800 tracking-tight">{title}</h3>
         <button

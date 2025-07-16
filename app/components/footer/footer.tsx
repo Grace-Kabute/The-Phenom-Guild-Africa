@@ -29,25 +29,25 @@ const Footer = () => {
         <div>
           <h3>Company</h3>
           <nav className="navigation">
-          <Link href="/#about" className='link'>About us</Link>
-          <Link href="/whyUs" className='link'>Why us</Link>
-          <Link href="/contact" className='link'>Contact us</Link>
+          <Link href="/#about" className='links'>About us</Link>
+          <Link href="/whyUs" className='links'>Why us</Link>
+          <Link href="/contact" className='links'>Contact us</Link>
           </nav>
         </div>
         <div>
           <h3>Products</h3>
           <nav className="navigation">
-          <Link href="/gallery" className='link'>Gallery</Link>
-          <Link href="/#projects" className='link'>Projects</Link>
-          <Link href="/#services" className='link'>Services</Link>
+          <Link href="/gallery" className='links'>Gallery</Link>
+          <Link href="/#projects" className='links'>Projects</Link>
+          <Link href="/#services" className='links'>Services</Link>
           </nav>
         </div>
         <div>
           <h3>Products</h3>
           <nav className="navigation">
-          <Link href="/" className='link'>Request a meeting</Link>
-          <Link href="/" className='link'>Careers</Link>
-          <Link href="/" className='link'>Partnership</Link>
+          <Link href="/" className='links'>Request a meeting</Link>
+          <Link href="/" className='links'>Careers</Link>
+          <Link href="/" className='links'>Partnership</Link>
           </nav>
         </div>
       </div>
