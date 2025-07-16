@@ -4,6 +4,7 @@
     box-sizing: 0;
 }
 .hero {
+  position: relative;
   overflow: hidden;
   height: 100vh;
   color: white;
@@ -98,6 +99,16 @@ p{
   color: white;
   z-index: 10;
 }
+.hero-socials a{
+  display: inline-block;
+}
+.hero-socials{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  }
 
 @keyframes bounce {
   0%, 100% {

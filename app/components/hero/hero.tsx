@@ -10,6 +10,7 @@ import { ChevronDown } from 'lucide-react';
 import { Montserrat  } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Maven_Pro } from 'next/font/google'
+import SocialLinks from '../socials';
 
 const mavenPro = Maven_Pro({
   subsets: ['latin'],
@@ -81,6 +82,9 @@ const Hero = () => {
           <ChevronDown size={60} />
         </div>
       )}
+            <div className="hero-socials">
+              <SocialLinks />
+          </div>
     </main>
   )
 }
