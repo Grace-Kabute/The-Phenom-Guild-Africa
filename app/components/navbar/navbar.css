@@ -70,7 +70,7 @@
     position: fixed;
     top: 8%;
     right: 0;
-    background-color: rgba(8, 39, 45, 0.95);
+    background-color: rgba(128, 128, 128, 0.473);
     z-index: 100;
     transition: all 0.3s ease-in-out;
 }
