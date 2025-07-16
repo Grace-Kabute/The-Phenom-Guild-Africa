@@ -14,7 +14,7 @@
 }
 .links{
     color: whitesmoke;
-    font-size: larger;
+    font-size: large;
 }
 .links:hover{
     text-decoration: underline;
